@@ -56,10 +56,13 @@ export const AddPost = () => {
       const formData = new FormData()
       const file = event.target.files[0]
       formData.append('image', file)
-      const { data: {url} } = await axios.post('/upload', formData)
+      const { data: { url} } = await axios.post('/upload', formData)
+      const editedUrl = url.replace(/\//, '')
 
-      const finalUrl = process.env.REACT_APP_API_URI + url
+      const finalUrl = process.env.REACT_APP_API_URI + editedUrl
 
+
+      console.log(finalUrl)
       setImageUrl(finalUrl)
     } catch (err) {
       alert('Виникла помилка при загрузки фото')
