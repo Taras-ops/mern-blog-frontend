@@ -58,7 +58,7 @@ export const AddPost = () => {
       formData.append('image', file)
       const { data: {url} } = await axios.post('/upload', formData)
 
-      const finalUrl = "http://localhost:5000" + url
+      const finalUrl = process.env.REACT_APP_API_URI + url
 
       setImageUrl(finalUrl)
     } catch (err) {
