@@ -1,0 +1,19 @@
+.header{
+    padding: 15px 0;
+    box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, .05);
+    margin-bottom: 50px;
+    background-color: #fff;
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo{
+    background-color: #000;
+    border-radius: 5px;
+    color: #f6f6f6;
+    padding: 5px 8px;
+}

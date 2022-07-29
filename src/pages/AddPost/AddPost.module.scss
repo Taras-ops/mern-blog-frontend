@@ -1,0 +1,26 @@
+.box{
+    padding: 20px 15px;
+}
+
+.box .titleInput{
+    margin-bottom: 20px;
+    input {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+
+    &::before,
+    &::after{
+        display: none;
+    }
+}
+
+.box .tagsInput {
+    margin-bottom: 20px;
+}
+
+.imgWrapper{
+    img{
+        max-width: 100%;
+    }
+}

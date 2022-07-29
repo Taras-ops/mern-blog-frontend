@@ -1,0 +1,9 @@
+.tagsBlock{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .tagsBlock{
+        order: -1;
+    }
+}
