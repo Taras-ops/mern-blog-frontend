@@ -9,7 +9,6 @@ import {
   CardContent,
   IconButton,
 } from '@mui/material'
-import moment from 'moment'
 import { useDispatch, useSelector } from 'react-redux'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline'
@@ -47,8 +46,6 @@ export const Post = ({
   if (fullPost) {
     currentComentsCount = currentCommentsCountRedux
   }
-
-
 
 
   const [likeCount, setLikeCount] = useState(likes.length)
@@ -107,7 +104,7 @@ export const Post = ({
         />
       )}
       <CardContent className={styles.post__content}>
-        <UserInfo {...user} additionalText={createdAt} />
+        <UserInfo {...user} createdAt={createdAt} />
         <div className={styles.post__indention}>
           <Link to={`/posts/${id}`}>
             <Typography variant='h4'>{title}</Typography>

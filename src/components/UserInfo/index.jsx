@@ -4,13 +4,11 @@ import moment from 'moment'
 
 import { Typography, Grid } from '@mui/material'
 import PersonIcon from '@mui/icons-material/Person';
-import { useSelector } from 'react-redux';
+
 
 export const UserInfo = ({fullName, avatarUrl, createdAt}) => {
 
-  const timeFromNow = moment(createdAt, "YYYYMMDD").locale('uk').fromNow();
-
-  const {data} = useSelector((state) => state.auth)
+  const timeFromNow = moment(createdAt).fromNow();
 
   return (
     <Grid container className={styles.userInfo}>
