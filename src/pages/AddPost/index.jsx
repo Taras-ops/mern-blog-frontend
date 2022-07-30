@@ -56,7 +56,7 @@ export const AddPost = () => {
       const formData = new FormData()
       const file = event.target.files[0]
       formData.append('image', file)
-      const { data: { url} } = await axios.post('/upload', formData)
+      const { data: { url} } = await axios.post('/uploads', formData)
       const editedUrl = url.replace(/\//, '')
 
       const finalUrl = process.env.REACT_APP_API_URI + editedUrl
