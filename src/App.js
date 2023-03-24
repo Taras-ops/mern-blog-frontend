@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchAuthMe } from './redux/slices/auth'
 
 function App() {
+
+  
   const dispatch = useDispatch()
 
   useEffect(() => {
